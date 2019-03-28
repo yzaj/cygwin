@@ -6,7 +6,7 @@
 
 https://raw.githubusercontent.com/yzaj/gitbash/master/gitbash_latest.exe
 
-2.执行：
+2.在 GitBash 中执行：
 
 ```shell
   
