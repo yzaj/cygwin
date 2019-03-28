@@ -6,7 +6,7 @@
 
 https://raw.githubusercontent.com/yzaj/gitbash/master/gitbash_latest.exe
 
-#### 2.然后执行：
+#### 2.执行：
 
 ```shell
   
