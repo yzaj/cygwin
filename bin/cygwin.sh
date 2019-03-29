@@ -17,7 +17,9 @@ readonly cygwin="${destdir}/bin/mintty.exe"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
 
-
+if [[ -f "${CYGLNK}" ]]; then
+  rm "${CYGLNK}"
+fi
 
 
 
