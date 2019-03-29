@@ -29,7 +29,7 @@ cd "${tempdir}"
 
 "${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
 
-
+echo ok
 
 
 
