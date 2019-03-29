@@ -8,7 +8,7 @@ readonly CYGURL='https://mirrors.aliyun.com/cygwin/'
 readonly CYGPAK='wget'
 
 readonly drive="$1"
-
+readonly rootdir="/${drive}/yzaj"
 
 
 
