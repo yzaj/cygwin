@@ -9,6 +9,20 @@ readonly CYGPAK='wget'
 
 readonly drive="$1"
 readonly rootdir="/${drive}/yzaj"
+readonly srcdir="${rootdir}/cygwin/resource"
+readonly destdir="${rootdir}/cygwin64"
+readonly tempdir="${rootdir}/temp/cygwin"
+
+
+
+
+
+
+
+
+
+
+
 
 
 
