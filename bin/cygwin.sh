@@ -1,0 +1,1 @@
+echo ivan $1 qinwei
