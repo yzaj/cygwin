@@ -14,5 +14,11 @@ fi
 readonly drive
 readonly ownerdir="/${drive}/yzaj"
 readonly repodir="/${drive}/yzaj/${REPO}"
+baktime="$(date +'%Y-%m-%d-%H%M%S')"
+readonly baktime
+
+if [[ -d "${repodir}" ]]; then
+  mv "${repodir}" "${repodir}.bak.${baktime}"
+fi
 
 git clone --depth 1 "${url}" "${repodir}"
