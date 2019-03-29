@@ -12,9 +12,10 @@ readonly rootdir="/${drive}/yzaj"
 readonly srcdir="${rootdir}/cygwin/resource"
 readonly destdir="${rootdir}/cygwin64"
 readonly tempdir="${rootdir}/temp/cygwin"
-
-
-
+readonly cygsrc="${srcdir}/Cygwin-x86_64.exe"
+readonly cygwin="${destdir}/bin/mintty.exe"
+baktime="$(date +'%Y-%m-%d-%H%M%S')"
+readonly baktime
 
 
 
