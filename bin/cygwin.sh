@@ -5,7 +5,7 @@ set -euo pipefail
 
 readonly CYGLNK='/c/Users/Public/Desktop/Cygwin64 Terminal.lnk'
 readonly CYGURL='https://mirrors.aliyun.com/cygwin/'
-readonly CYGPAK='wget curl screen tree git patch psmisc rsync cron'
+readonly CYGPAK='"wget curl"'
 
 readonly drive="$1"
 readonly rootdir="/${drive}/yzaj"
