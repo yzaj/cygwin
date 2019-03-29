@@ -25,7 +25,7 @@ if [[ -d "${destdir}" ]]; then
   mv "${destdir}" "${destdir}.bak.${baktime}"
 fi
 
-
+"${cygsrc}" -q -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
 
 
 
