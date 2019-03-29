@@ -4,14 +4,14 @@
 set -euo pipefail
 
 readonly REPO='cygwin'
-readonly url="https://github.com/yzaj/${REPO}.git"
-drive='c'
 
+drive='c'
 if [[ -d "/d" ]]; then
   drive='d'
 fi
 
 readonly drive
+readonly url="https://github.com/yzaj/${REPO}.git"
 readonly repodir="/${drive}/yzaj/${REPO}"
 readonly tempdir="/${drive}/yzaj/temp/${REPO}"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
@@ -23,8 +23,8 @@ fi
 
 git clone --depth 1 "${url}" "${repodir}"
 
-mkdir -p "${tempdir}/${REPO}"
+mkdir -p "${tempdir}"
 
-if [[ -s "${repodir}/bin/cygwin.sh" ]]; then
-  bash "${repodir}"/bin/cygwin.sh "${drive}" 2>&1 | tee "${phonelog}"
+if [[ -s "${repodir}/bin/${REPO}.sh" ]]; then
+  bash "${repodir}"/bin/"${REPO}.sh" "${drive}" 2>&1 | tee "${tempdir}/${REPO}.log"
 fi
