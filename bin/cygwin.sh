@@ -21,7 +21,9 @@ if [[ -f "${CYGLNK}" ]]; then
   rm "${CYGLNK}"
 fi
 
-
+if [[ -d "${destdir}" ]]; then
+  mv "${destdir}" "${destdir}.bak.${baktime}"
+fi
 
 
 
