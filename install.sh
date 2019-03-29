@@ -12,7 +12,6 @@ if [[ -d "/d" ]]; then
 fi
 
 readonly drive
-readonly ownerdir="/${drive}/yzaj"
 readonly repodir="/${drive}/yzaj/${REPO}"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
