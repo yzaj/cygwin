@@ -26,6 +26,7 @@ if [[ -d "${destdir}" ]]; then
 fi
 
 cd "${tempdir}"
+
 "${cygsrc}" -q -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
 
 
