@@ -27,7 +27,7 @@ fi
 
 cd "${tempdir}"
 
-"${cygsrc}" -q -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
+"${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
 
 
 
