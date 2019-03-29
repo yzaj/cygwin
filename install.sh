@@ -13,6 +13,7 @@ fi
 
 readonly drive
 readonly repodir="/${drive}/yzaj/${REPO}"
+readonly tempdir="/${drive}/yzaj/temp/${REPO}"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
 
@@ -21,3 +22,9 @@ if [[ -d "${repodir}" ]]; then
 fi
 
 git clone --depth 1 "${url}" "${repodir}"
+
+mkdir -p "${tempdir}/${REPO}"
+
+if [[ -s "${repodir}/bin/cygwin.sh" ]]; then
+  bash "${repodir}"/bin/cygwin.sh "${drive}" 2>&1 | tee "${phonelog}"
+fi
