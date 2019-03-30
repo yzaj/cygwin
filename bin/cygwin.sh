@@ -22,9 +22,9 @@ if [[ -f "${CYGLNK}" ]]; then
   rm "${CYGLNK}"
 fi
 
-
-
-
+if [[ -d "${destdir}" ]]; then
+  mv "${destdir}" "${bakdir}/cygwin64.bak.${baktime}"
+fi
 
 
 
