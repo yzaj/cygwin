@@ -25,16 +25,7 @@ if [[ -d "${repodir}" ]]; then
   mv "${repodir}" "${bakdir}/${repodir}.bak.${baktime}"
 fi
 
-
-
-
-
-
-
-
 git clone --depth 1 "${url}" "${repodir}"
-
-
 
 if [[ -s "${repodir}/bin/${REPO}.sh" ]]; then
   bash "${repodir}"/bin/"${REPO}.sh" "${drive}" 2>&1 | tee "${tempdir}/${REPO}.log"
