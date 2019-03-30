@@ -23,6 +23,7 @@ readonly cygwin="${destdir}/bin/mintty.exe"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
 
+# 安装 Cygwin
 if [[ -f "${CYGLNK}" ]]; then
   rm "${CYGLNK}"
 fi
