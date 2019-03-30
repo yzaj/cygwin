@@ -22,7 +22,7 @@ mkdir -p "${tempdir}"
 mkdir -p "${bakdir}"
 
 if [[ -d "${repodir}" ]]; then
-  mv "${repodir}" "${bakdir}/${repodir}.bak.${baktime}"
+  mv "${repodir}" "${bakdir}/${REPO}.bak.${baktime}"
 fi
 
 git clone --depth 1 "${url}" "${repodir}"
