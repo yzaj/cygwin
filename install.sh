@@ -18,8 +18,8 @@ readonly bakdir="/${drive}/yzaj/backup/${REPO}"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
 
-
-
+mkdir -p "${tempdir}"
+mkdir -p "${bakdir}"
 
 
 
@@ -32,7 +32,7 @@ fi
 
 git clone --depth 1 "${url}" "${repodir}"
 
-mkdir -p "${tempdir}"
+
 
 if [[ -s "${repodir}/bin/${REPO}.sh" ]]; then
   bash "${repodir}"/bin/"${REPO}.sh" "${drive}" 2>&1 | tee "${tempdir}/${REPO}.log"
