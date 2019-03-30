@@ -14,8 +14,17 @@ readonly drive
 readonly url="https://github.com/yzaj/${REPO}.git"
 readonly repodir="/${drive}/yzaj/${REPO}"
 readonly tempdir="/${drive}/yzaj/temp/${REPO}"
+readonly bakdir="/${drive}/yzaj/backup/${REPO}"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
+
+
+
+
+
+
+
+
 
 if [[ -d "${repodir}" ]]; then
   mv "${repodir}" "${repodir}.bak.${baktime}"
