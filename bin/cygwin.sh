@@ -27,6 +27,6 @@ fi
 
 cd "${tempdir}"
 
-"${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
+"${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P wget,curl
 
 
