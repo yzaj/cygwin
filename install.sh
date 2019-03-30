@@ -21,14 +21,16 @@ readonly baktime
 mkdir -p "${tempdir}"
 mkdir -p "${bakdir}"
 
-
-
-
-
-
 if [[ -d "${repodir}" ]]; then
-  mv "${repodir}" "${repodir}.bak.${baktime}"
+  mv "${repodir}" "${bakdir}/${repodir}.bak.${baktime}"
 fi
+
+
+
+
+
+
+
 
 git clone --depth 1 "${url}" "${repodir}"
 
