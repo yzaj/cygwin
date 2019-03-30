@@ -26,15 +26,8 @@ if [[ -d "${destdir}" ]]; then
   mv "${destdir}" "${bakdir}/cygwin64.bak.${baktime}"
 fi
 
-
-
-
-if [[ -d "${destdir}" ]]; then
-  mv "${destdir}" "${destdir}.bak.${baktime}"
-fi
-
 cd "${tempdir}"
 
-"${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P $CYGPAK
+"${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
 
 
