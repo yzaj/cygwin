@@ -41,8 +41,8 @@ if [[ ! -f "${cygwin}" ]]; then
   exit "${E_INSTALL_FAILED}"
 fi
 
-
-
+# 复制文件
+cp "${srcdir}"/apt-cyg "${destdir}"/
 
 
 
