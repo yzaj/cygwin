@@ -37,7 +37,7 @@ cd "${tempdir}"
 "${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
 
 if [[ ! -f "${cygwin}" ]]; then
-  err "Unable to do_something"
+  err "Cygwin install failed"
   exit "${E_INSTALL_FAILED}"
 fi
 
