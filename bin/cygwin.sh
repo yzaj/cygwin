@@ -47,4 +47,4 @@ fi
 cp "${srcdir}"/apt-cyg "${destdir}"/bin
 
 # 运行 Cygwin
-"${cygwin}" -i /Cygwin-Terminal.ico -e /bin/bash --login -i -c "ln -s /cygdrive/${drive}/yzaj /yzaj"
+"${cygwin}" -i ${destdir}/Cygwin-Terminal.ico -e ${destdir}/bin/bash --login -i -c "ln -s /cygdrive/${drive}/yzaj /yzaj"
