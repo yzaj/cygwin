@@ -42,9 +42,9 @@ if [[ ! -f "${cygwin}" ]]; then
 fi
 
 # 复制文件
-cp "${srcdir}"/apt-cyg "${destdir}"/
+cp "${srcdir}"/apt-cyg "${destdir}"/bin
 
-
+# 
 
 
 
