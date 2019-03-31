@@ -24,6 +24,8 @@ baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
 
 # 安装 Cygwin
+mkdir -p "${bakdir}"
+
 if [[ -f "${CYGLNK}" ]]; then
   rm "${CYGLNK}"
 fi
