@@ -4,6 +4,12 @@
 set -euo pipefail
 
 readonly REPO='cygwin'
+readonly MINTTY='git-bash.exe'
+readonly E_USE_MINTTY=1
+
+err() {
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >&2
+}
 
 drive='c'
 if [[ -d "/d" ]]; then
@@ -17,6 +23,11 @@ readonly tempdir="/${drive}/yzaj/temp/${REPO}"
 readonly bakdir="/${drive}/yzaj/backup/${REPO}"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
+
+if [[ ! -f "/${MINTTY}" ]]; then
+  err "Please use gitbash to execute"
+  exit "${E_USE_MINTTY}"
+fi
 
 mkdir -p "${tempdir}"
 mkdir -p "${bakdir}"
