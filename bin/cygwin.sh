@@ -49,7 +49,7 @@ fi
 # 复制文件
 mkdir -p "${userdir}"
 cp "${srcdir}"/apt-cyg "${destdir}"/bin
-cp "${srcdir}"/.minttyrc "${userdir}"
+cp "${srcdir}"/{'.bashrc','.bash_profile','.inputrc','.profile','.minttyrc'} "${userdir}"
 
 # 运行 Cygwin
 "${cygwin}" -i "${destdir}"/Cygwin-Terminal.ico -e "${destdir}"/bin/bash --login -i -c "ln -s /cygdrive/${drive}/yzaj /yzaj"
