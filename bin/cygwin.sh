@@ -21,7 +21,10 @@ readonly bakdir="${rootdir}/backup/cygwin64"
 readonly cygsrc="${srcdir}/Cygwin-x86_64.exe"
 readonly cygwin="${destdir}/bin/mintty.exe"
 baktime="$(date +'%Y-%m-%d-%H%M%S')"
+username="$(whoami)"
 readonly baktime
+readonly username
+readonly userdir="${destdir}/home/${username}"
 
 # 安装 Cygwin
 mkdir -p "${bakdir}"
@@ -44,7 +47,9 @@ if [[ ! -f "${cygwin}" ]]; then
 fi
 
 # 复制文件
+mkdir -p "${userdir}"
 cp "${srcdir}"/apt-cyg "${destdir}"/bin
+cp "${srcdir}"/.minttyrc "${userdir}"
 
 # 运行 Cygwin
 "${cygwin}" -i "${destdir}"/Cygwin-Terminal.ico -e "${destdir}"/bin/bash --login -i -c "ln -s /cygdrive/${drive}/yzaj /yzaj"
