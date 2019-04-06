@@ -25,7 +25,7 @@ baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
 
 if [[ ! -f "/${MINTTY}" ]]; then
-  err "$0Please use gitbash to execute"
+  err "$0 Please use gitbash to execute"
   exit "${E_USE_MINTTY}"
 fi
 
