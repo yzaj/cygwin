@@ -12,6 +12,7 @@ err() {
   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >&2
 }
 
+readonly oneself="$0"
 readonly drive="$1"
 readonly rootdir="/${drive}/yzaj"
 readonly srcdir="${rootdir}/cygwin/resource"
@@ -42,7 +43,7 @@ cd "${tempdir}"
 "${cygsrc}" -q -W -R "${destdir}" -s "${CYGURL}" -P "${CYGPAK}"
 
 if [[  -f "${cygwin}" ]]; then
-  err "$0 Cygwin install failed"
+  err "${oneself##*/}: cygwin install failed"
   exit "${E_INSTALL_FAILED}"
 fi
 
