@@ -25,7 +25,7 @@ baktime="$(date +'%Y-%m-%d-%H%M%S')"
 readonly baktime
 
 if [[ ! -f "/${MINTTY}" ]]; then
-  err "$0 Please use gitbash to execute"
+  err "install.sh: please use gitbash to execute"
   exit "${E_USE_MINTTY}"
 fi
 
